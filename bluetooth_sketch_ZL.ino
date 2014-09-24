@@ -30,12 +30,32 @@ void setup()
   bluetooth.begin(9600);  // Start bluetooth serial at 9600
 }
 
+void logData( int value1, int value2, int value3) 
+{
+   char buffer[5];
+  
+   Serial.print("#S|LOGTEST|[");
+   Serial.print(itoa((value1), buffer, 10));
+   Serial.print(";");
+   Serial.print(itoa((value2), buffer, 10));
+   Serial.print(";");
+   Serial.print(itoa((value3), buffer, 10));
+   Serial.println("]#");
+   readSerialString(serInString,1000);
+   // There ought to be a check here for a non 0 return value indicating an error and some error handeling
+} 
+
 void loop()
 {
   if(bluetooth.available())  // If the bluetooth sent any characters
   {
     // Send any characters the bluetooth prints to the serial monitor
     Serial.print((char)bluetooth.read());  
+	// Also log data to Raw_data.txt through Gobtwino
+	char buffer[5]
+	Serial.print("#S|LOGVOL|[");
+	Serial.print(itoa((char)bluetooth.read(), buffer, 10));
+	Serial.println("]#");
   }
   if(Serial.available())  // If stuff was typed in the serial monitor
   {
