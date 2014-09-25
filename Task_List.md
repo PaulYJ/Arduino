@@ -1,0 +1,2 @@
+- [ ] Try connecting sensor to Arduino + Bluetooth
+- [ ] Receive and save data
