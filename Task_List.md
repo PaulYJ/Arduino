@@ -1,2 +1,2 @@
-- [] Try connecting sensor to Arduino + Bluetooth
-- [] Receive and save data
+- [ ] Try connecting sensor to Arduino + Bluetooth
+- [ ] Receive and save data
