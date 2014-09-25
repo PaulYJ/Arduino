@@ -1,26 +1,14 @@
-/*
-  Example Bluetooth Serial Passthrough Sketch
- by: Jim Lindblom
- SparkFun Electronics
- date: February 26, 2013
- license: Public domain
-
- This example sketch converts an RN-42 bluetooth module to
- communicate at 9600 bps (from 115200), and passes any serial
- data between Serial Monitor and bluetooth module.
- */
-#include <SoftwareSerial.h>  
-
-int analogPin = 0
+#include <SoftwareSerial.h>
+double A;
+int D;
+int SG=0;
 int bluetoothTx = 2;  // TX-O pin of bluetooth mate, Arduino D2
 int bluetoothRx = 3;  // RX-I pin of bluetooth mate, Arduino D3
-
 SoftwareSerial bluetooth(bluetoothTx, bluetoothRx);
 
-void setup()
-{
-  Serial.begin(9600);  // Begin the serial monitor at 9600bps
 
+void setup() {
+  Serial.begin(9600);
   bluetooth.begin(115200);  // The Bluetooth Mate defaults to 115200bps
   bluetooth.print("$");  // Print three times individually
   bluetooth.print("$");
@@ -31,10 +19,10 @@ void setup()
   bluetooth.begin(9600);  // Start bluetooth serial at 9600
 }
 
-void loop()
-{ 
-  float data = analogRead(analogPin)
-  bluetooth.print(data) //bluetooth print data from analog input
+void loop() {
+  A=analogRead(SG);
+  delay(1);
+
   if(bluetooth.available())  // If the bluetooth sent any characters
   {
     // Send any characters the bluetooth prints to the serial monitor
@@ -47,3 +35,4 @@ void loop()
   }
   // and loop forever and ever!
 }
+ 
