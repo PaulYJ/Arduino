@@ -1,4 +1,4 @@
-Here are codes for Arduino and related hardwares
+Here are codes for Arduino and related hardware!
 
 ---
 
