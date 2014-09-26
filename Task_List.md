@@ -1,2 +1,3 @@
-- [ ] Try connecting sensor to Arduino + Bluetooth
+- [X] Try connecting sensor to Arduino + Bluetooth
 - [ ] Receive and save data
+  - [X] Used BlueTerm to save data on cell phone   
