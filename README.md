@@ -1,6 +1,6 @@
 Here are codes for Arduino and related hardware!
 
-Be sure to check out Shor_Term_Task_List (and add to it as you wish)!
+Be sure to check out Short_Term_Task_List (and add to it as you wish)!
 
 ---
 
