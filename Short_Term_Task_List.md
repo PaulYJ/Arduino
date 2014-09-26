@@ -5,6 +5,7 @@
 - [ ] Try Arduino pro mini
 - [ ] Design wristband
 - [ ] Try with two inputs
+
 ---
 Not so short-term
 - [ ] Website for the project
