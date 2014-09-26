@@ -6,4 +6,5 @@
 - [ ] Design wristband
 
 ---
+Not so short-term
 - [ ] Website for the project
