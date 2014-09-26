@@ -5,3 +5,5 @@
 - [ ] Try Arduino pro mini
 - [ ] Design wristband
 
+---
+- [ ] Website for the project
